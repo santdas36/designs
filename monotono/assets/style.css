@@ -298,7 +298,7 @@
  
  .content {
      max-width: 95%;
-     min-height: 50vh;
+     min-height: 400px;
      margin: 2em;
      overflow: hidden;
      display: flex;
@@ -561,7 +561,7 @@
  
  button {
      position: absolute;
-     top: 50vh;
+     top: 400px;
      margin: 0.5rem;
      padding: 0.25rem;
      width: 3rem;
