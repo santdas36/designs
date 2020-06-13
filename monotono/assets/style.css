@@ -146,7 +146,7 @@
  }
  
  .main {
-     height: calc(100vh - 3.5em);
+     height: calc(800px - 3.5em);
      width: 100%;
      overflow: hidden;
      background: url('../images/bg.jpg') center no-repeat;
@@ -168,7 +168,7 @@
  }
  
  .recent {
-     min-height: 100vh;
+     min-height: 800px;
      width: 100%;
      background: url('../images/s/slide0.jpg') no-repeat;
      background-position: center;
