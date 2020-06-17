@@ -17,14 +17,16 @@ html {
   font-size: 100%; }
 
 body {
-  font-size: 1em;
-  line-height: 1.6;
-  font-weight: 400;
-  font-family: "Montserrat", sans-serif;
-  color: #f4f1de;
-  background: #3d405b;
-  margin: 0;
-  padding: 0; }
+font-size: 1em;
+line-height: 1.6;
+font-weight: 400;
+font-family: "Montserrat", sans-serif;
+color: var(--white);
+background: var(--violet);
+margin: 0;
+padding: 0;
+position: relative;
+}
 
 h1, h2, h3, h4 {
 font-weight: 700;
@@ -35,8 +37,15 @@ h2 { font-size: 2.50em; }
 h3 { font-size: 2.17em; }
 h4 { font-size: 2.00em; }
 p { font-size: 1.125em; }
-a { color: #f4f1de; font-size: 1.125em; font-family: "Playfair Display", serif; }
-a:hover { color: #e07a5f; }
+
+a {
+color: var(--white);
+font-size: 1.125em;
+font-family: "Playfair Display", serif;
+}
+a:hover {
+color: var(--orange);
+}
 
 .container {
 width: 100%;
@@ -49,7 +58,9 @@ position: fixed;
 top: 0;
 right: 8rem;
 margin: 0;
+padding: 0;
 z-index: 3;
+box-shadow: 0 0 1rem rgba(0,0,0,0.25);
 }
 nav ul li a {
 padding: 0.5rem 2rem;
@@ -92,22 +103,25 @@ background: var(--lightviolet);
 .serif {
 font-family: "Playfair Display", serif;
 }
-#hero {
+.hero {
 margin: 8rem;
 margin-right: 0;
 width: calc(100% - 8rem);
 }
 h1.name {
 font-weight: 900;
-font-size: 4.5em;
+font-size: 5em;
 position: relative;
- text-shadow: 	-1px 1px var(--orange),
+text-shadow: 	-1px 1px var(--orange),
  						-2px 2px var(--orange),
  						-3px 3px var(--orange),
  						-4px 4px var(--orange),
  						-5px 5px var(--orange);
 left: 0.25rem;
 color: var(--yellow);
+margin: 0;
+margin-bottom: 1rem;
+z-index: 2;
 }
 h1.name span {
 position: absolute;
@@ -128,7 +142,7 @@ background: var(--orange);
 }
 .short-info .short-about {
 flex: 0 0 calc(100% - 29rem);
-padding: 4rem 3rem 2rem 2rem;
+padding: 4rem 3rem 0.5rem 2rem;
 display: flex;
 align-items: flex-end;
 position: relative;
@@ -159,6 +173,14 @@ padding: 1rem 2rem;
 background: var(--orange);
 }
 
+#about {
+position: absolute;
+width: calc(100% - 32rem);
+height: 8rem;
+background: var(--white);
+top: 11rem;
+left: 0;
+}
 @media (min-width: 400px) {}
 
 @media (min-width: 550px) {}
