@@ -16,7 +16,7 @@
 	<header>
 		<nav>
 			<ul>
-				<li><a href="#" class="nav-about">About</a></li>
+				<li><a href="#" class-="nav-about">About</a></li>
 				<li><a href="#" class="nav-shots">Shots</a></li>
 				<li><a href="#" class="nav-contact">Contact</a></li>
 			</ul>
@@ -52,9 +52,44 @@
 	
 	<section id="about">
 		<div class="container">
-		<div class="container">
 			<div class="about hero">
 				<h1 class="name"><span>The One and Only</span> Allen <i>Murphy</i></h1>
+			</div>
+			<div id="gallery" class="gallery row one">
+				<div class="column one">
+					<div class="image"></div>
+					<div class="image space"></div>
+					<div class="image"></div>
+				</div>
+				<div class="column two">
+					<div class="image"></div>
+					<div class="image space"></div>
+					<div class="image"></div>
+				</div>
+				<div class="column three">
+					<div class="image"></div>
+					<div class="image space"></div>
+					<div class="image"></div>
+				</div>
+				<div class="image-half"></div>
+			</div>
+			<div class="gallery row two">
+				<div class="column one">
+					<div  id="1" class="image"></div>
+					<div  id="2" class="image space"></div>
+					<div  id="3" class="image"></div>
+				</div>
+				<div class="column two">
+					<div class="image"></div>
+					<div class="image space"></div>
+					<div class="image"></div>
+				</div>
+				<div class="column three">
+					<div class="image"></div>
+					<div class="image space"></div>
+					<div class="image"></div>
+				</div>
+				<div class="image-half"></div>
 			</div>
 		</div>
 	</section>
@@ -74,11 +109,16 @@
   		}, 300);
   		setTimeout(() => {
   			$('#home').hide();
+  			$('.gallery').each(function() {
+  				$(this).css('display', 'block').delay(100).queue(function() {
+  					$(this).addClass('active');
+  				});
+  			});
   		}, 750);
   	});
   });
+  
   </script>
-
 </body>
 
 </html>
