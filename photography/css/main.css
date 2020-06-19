@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&family=Dancing+Script&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
 
 :root {
 --white: #f4f1de;
@@ -104,7 +104,6 @@ transform: translateY(-0.25rem);
 }
 a.nav-about:before {
 background: var(--orange);
-
 }
 a.nav-shots:before {
 background: var(--green);
@@ -114,6 +113,12 @@ background: var(--lightviolet);
 }
 .serif {
 font-family: "Playfair Display", serif;
+}
+.script {
+font-family: "Dancing Script", serif;
+}
+.black {
+font-weight: 900;
 }
 .hero {
 margin: 8rem;
@@ -228,6 +233,10 @@ margin: 0 1.5rem;
 .short-info .avatar .cta:hover:after {
 transform: translateX(0);
 }
+#home.hidden {
+transform: translateY(-100px);
+opacity: 0;
+}
 #home.aside .short-info {
 overflow: hidden;
 }
@@ -249,15 +258,16 @@ transform-style: preserve-3D;
 }
 #home.aside h1.name {
 font-size: 3em;
-transition: font-size 0.5s 0.25s;
+color: var(--white);
+transition: font-size 0.5s 0.25s, color 0.5s 0.25s;
 }
 #home.aside h1.name i {
 transition: font-size 0.5s -0.25s;
 }
 #home.aside h1.name span {
-transition: font-size 0.5s -0.25s;
+transition: font-size 0.5s -0.25s, color 0.5s 0.5s, filter 0.5s 0.5s;
 color: var(--yellow);
-opacity: 0.25;
+filter: brightness(105%);
 }
 .social {
 position: absolute;
@@ -289,11 +299,26 @@ background: var(--white);
 top: 19rem;
 left: 0;
 }
+#about .overlay {
+position: absolute;
+right: -2rem;
+bottom: 0;
+}
+#about .waves {
+width: 8rem;
+fill: var(--green);
+filter: drop-shadow(0 1.5rem var(--green)) drop-shadow(0 1.5rem var(--green));
+}
+#about.active .overlay {
+right: 2rem;
+opacity: 0;
+}
 #about.active {
 width: 100vw;
 height: 100vh;
 top: 0;
-transition: width 0.5s 0.25s, height 0.5s 0.25s, top 0.5s 0.25s;
+background: var(--yellow);
+transition: background 0.5s 0.25s, width 0.5s 0.25s, height 0.5s 0.25s, top 0.5s 0.25s;
 }
 #about .about.hero {
 margin-bottom: 4rem;
@@ -301,6 +326,7 @@ margin-bottom: 4rem;
 #about .about.hero h1.name {
 font-size: 3em;
 opacity: 0;
+color: var(--white);
 }
 #about.active .about.hero h1.name {
 opacity: 1;
@@ -308,21 +334,23 @@ transition: opacity 0.025s 0.725s;
 }
 #about .about.hero h1.name span {
 color: var(--yellow);
-opacity: 0.25;
+filter: brightness(105%);
 }
 
 .gallery.row {
 width: calc(100vw - 16rem);
 height: 720px;
 margin: 0 8rem;
-background: var(--violet);
 display: block;
 position: relative;
 z-index: 1;
 display: none;
 opacity: 0;
-transform: translateY(180px);
 transition: opacity 0.75s ease-out, transform 0.5s ease-out;
+}
+.gallery.shown {
+display: block;
+transform: translateY(180px);
 }
 .gallery.active {
 opacity: 1;
@@ -334,6 +362,7 @@ width: calc((100vw - 16rem) / 3);
 height: 360px;
 background: var(--green);
 margin: 0;
+box-shadow: 0 0 0 0.5rem var(--orange);
 }
 .gallery .column.two {
 margin-top: 180px;
@@ -351,12 +380,40 @@ left: 0;
 }
 .gallery.one .image-half {
 top: 0;
+left: 0;
+background: url(../img/bg1.jpg);
+background-size: cover;
+background-position: top right;
 }
 .gallery.two .image-half {
 bottom: 0;
+left: 0;
+background: url(../img/bg2.jpg);
+background-size: cover;
+background-position: bottom left;
 }
-
-
+.gallery .column {
+position: relative;
+}
+.gallery .image{
+width: calc(100% - 1rem);
+height: calc(100% - 1rem);
+border: 0.5rem solid var(--orange);
+}
+.image img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+.gallery .column .quote {
+position: absolute;
+top: 100%;
+left: 0;
+font-size: 4rem;
+white-space: wrap;
+transform: translateY(-50%);
+line-height: 0.75;
+}
 @media (min-width: 400px) {}
 
 @media (min-width: 550px) {}
