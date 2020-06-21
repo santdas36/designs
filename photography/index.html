@@ -60,28 +60,28 @@
 			</div>
 			<div id="gallery" class="gallery row one">
 				<div class="column one" data-number="01">
-					<div class="image"><img src="img/about1.jpg"/></div>
+					<div class="image"><img src="img/about1.webp" class="slideUp"/></div>
 					<span class="caption serif" data-small="Born and Raised">California</span>
 					<span class="quote"><span class="serif black"><b>&nbsp;&nbsp;Pic</b></span><br> <small><i>-tures</i></small></span>
 				</div>
 				<div class="column two" data-number="02">
-					<div class="image"><img src="img/about2.jpg"/></div>
+					<div class="image"><img src="img/about2.webp" class="slideUp"/></div>
 					<span class="caption serif" data-small="28 years old">12/23</span>
 					<span class="quote"><span class="script"><i>&nbsp;&nbsp;speak</i></span><br> <b>better</b></span>
 				</div>
 				<div class="column three" data-number="03">
-					<div class="image"><img src="img/about3.jpg"/></div>
+					<div class="image"><img src="img/about3.webp" class="slideUp"/></div>
 					<span class="caption serif" data-small="self taught">Photographer</span>
 					<span class="quote"><span class="serif"><small>&nbsp;&nbsp;than</small></span><br> <span class="serif black"><i>words.</i></span></span>
 				</div>
 				<div class="image-half">
 					<div class="image">
-						<img src="img/bg1.jpg" />
+						<img src="img/bg1.webp" />
 					</div>
 				</div>
 				<div class="image-center">
 					<div class="image">
-						<img src="img/center.jpg" />
+						<img src="img/center.webp" />
 					</div>
 					<span class="quote one">Pictures</span>
 					<span class="quote two">speak</span>
@@ -92,26 +92,28 @@
 			</div>
 			<div class="gallery row two">
 				<div class="column one" data-number="04">
-					<div class="image"><img src="img/about4.jpg"/></div>
+					<div class="image"><img src="img/about4.webp" class="slideUp"/></div>
 					<span class="caption serif" data-small="Adventure Seeker">Explorer</span>
 				</div>
 				<div class="column two" data-number="05">
-					<div class="image"><img src="img/about5.jpg"/></div>
+					<div class="image"><img src="img/about5.webp" class="slideUp"/></div>
 					<span class="caption serif" data-small="25+ projects, 250+ smiles">Experience</span>
 				</div>
 				<div class="column three" data-number="06">
-					<div class="image"><img src="img/about6.jpg"/></div>
+					<div class="image"><img src="img/about6.webp" class="slideUp"/></div>
 					<span class="caption serif" data-small="also">Crayon Love</span>
 				</div>
 				<div class="image-half">
 					<div class="image">
-						<img src="img/bg2.jpg" />
+						<img src="img/bg2.webp" />
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-	<section  style="height: 100vh;">
+	<section id="shots">
+	</section>
+	<section id="contact">
 	</section>
 	</main>
 
@@ -132,6 +134,11 @@
   			$('.gallery').toggleClass('shown').delay(100).queue(function() {
   				$(this).stop().toggleClass('active');
   				$('#home').toggle();
+  				$('img.slideUp').each(function(i) {
+  					setTimeout(() => {
+  					$(this).removeClass('slideUp');
+  					}, i * 300 );
+  				});
   			});
   		}, 750);
   	});

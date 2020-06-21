@@ -190,7 +190,7 @@ box-shadow: 1.5rem 0 var(--green), 3rem 0 var(--yellow);
 flex: 0 0 24rem;
 height: 24rem;
 position: relative;
-background: url(../img/avatar.jpg);
+background: url(../img/avatar.webp);
 background-size: cover;
 }
 .short-info .avatar .cta {
@@ -314,11 +314,28 @@ opacity: 0;
 }
 #about.active {
 width: 100vw;
-height: 100vh;
-margin-bottom: calc( ((100vw - 16rem) * 0.8888) + 35em);
+height: calc(2 * ((100vw - 16rem) * 0.8888) + 35rem);
 top: 0;
 background: var(--yellow);
 transition: background 0.5s 0.25s, width 0.5s 0.25s, height 0.5s 0.25s, top 0.5s 0.25s;
+}
+#about:before {
+content: '';
+position: absolute;
+bottom: 0;
+left: 0;
+width: 100vw;
+height: calc(((100vw - 16rem) * 0.8888) + 35rem);
+background: var(--violet);
+transform: translateY(100%);
+opacity: 0;
+z-index: -1;
+}
+#about.active:before {
+transform: translateY(0);
+opacity: 1;
+transition: opacity 0.5s 0.75s, transform 0.5s 0.75s;
+z-index: 0;
 }
 #about .about.hero {
 margin-bottom: 4rem;
@@ -570,6 +587,23 @@ left: 0;
 .gallery.two .image-half {
 bottom: 0;
 left: 0;
+}
+.slideUp {
+opacity: 0;
+transform: translateY(100%);
+}
+#about.active + section#shots {
+margin-top: calc( 2* ((100vw - 16rem) * 0.8888) - 3rem);
+transition: margin-top 0.5s 0.25s;
+}
+section#shots {
+height: 100vh;
+background: var(--green);
+position: relative;
+}
+section#contact {
+height: 100vh;
+background: var(--lightviolet);
 }
 @media (min-width: 400px) {}
 
