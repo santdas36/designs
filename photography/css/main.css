@@ -597,12 +597,12 @@ margin-top: calc( 2* ((100vw - 16rem) * 0.8888) - 3rem);
 transition: margin-top 0.5s 0.25s;
 }
 section#shots {
-height: 100vh;
+height: 100px;
 background: var(--green);
 position: relative;
 }
 section#contact {
-height: 100vh;
+height: 100px;
 background: var(--lightviolet);
 }
 @media (min-width: 400px) {}
