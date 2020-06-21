@@ -138,8 +138,8 @@
   <script src="js/jquery.min.js"></script>
   <script>
   $(document).ready(function() {
-  	//$('.cta, .nav-about').on('click', function() {
-  	//	event.preventDefault();
+  	$('.cta, .nav-about').on('click', function() {
+  		event.preventDefault();
   		$('#home').toggleClass('aside');
   		$('#about').toggleClass('active');
   		$('html, body').animate({
@@ -157,7 +157,7 @@
   				});
   			});
   		}, 750);
-  	//});
+  	});
   });
   
   </script>
