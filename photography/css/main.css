@@ -1,4 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&family=Dancing+Script&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Dancing+Script&display=swap');
+
+[hidden] {
+display: none;
+}
 
 :root {
 --white: #f4f1de;
@@ -602,9 +606,102 @@ background: var(--green);
 position: relative;
 }
 section#contact {
-height: 100px;
 background: var(--lightviolet);
 }
+section#contact .container {
+padding: 8rem;
+width: calc(100% - 16rem);
+}
+.input-item {
+width: 100%;
+margin: 2rem 0;
+position: relative;
+}
+.input-item:before {
+position: absolute;
+content: '';
+width: 100%;
+height: 0;
+background: var(--white);
+bottom: 0;
+left: 0;
+z-index: 1;
+}
+.input-item label {
+position: absolute;
+left: 0;
+top: -1.5rem;
+}
+.input-item input {
+width: calc(100% - 12rem);
+padding: 1rem 10rem 1rem 2rem;
+font-size: 1.25em;
+background: var(--violet);
+border: none;
+font-weight: 700;
+}
+.input-item input:focus, textarea:focus {
+outline: none;
+}
+.input-item input.active {
+padding-bottom: 0.75rem;
+padding-top: 1.25rem;
+}
+.input-item input::placeholder, textarea::placeholder {
+color: var(--lightviolet);
+font-family: "Times New Roman", Times, serif;
+font-weight: 700;
+font-style: italic;
+}
+.input-item textarea {
+width: calc(100% - 4rem);
+font-size: 1.25em;
+background: var(--violet);
+border: none;
+font-weight: 700;
+resize: none;
+border-left: 2rem solid var(--violet);
+border-right: 2rem solid var(--violet);
+border-top: 1rem solid var(--violet);
+border-bottom: 1rem solid var(--violet);
+}
+.input-item .input-next {
+position: absolute;
+width: 8em;
+height: 100%;
+top: 0;
+right: 0;
+border: none;
+background: var(--white);
+}
+.input-item .input-next svg {
+height: 2rem;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-60%, -50%);
+fill: var(--violet);
+}
+.input-item .input-next:hover svg {
+transform: translate(-40%, -50%);
+}
+.input-next.submit {
+position: relative;
+white-space: nowrap;
+padding: 1rem 5rem 1rem 2rem;
+width: auto;
+color: var(--violet);
+}
+.input-next.submit svg {
+left: auto;
+right: 1rem;
+height: 1.75rem;
+}
+
+
+
+
+
 @media (min-width: 400px) {}
 
 @media (min-width: 550px) {}
