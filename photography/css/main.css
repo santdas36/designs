@@ -605,6 +605,7 @@ height: 100px;
 background: var(--green);
 position: relative;
 }
+
 section#contact {
 background: var(--lightviolet);
 }
@@ -612,22 +613,47 @@ section#contact .container {
 padding: 8rem;
 width: calc(100% - 16rem);
 }
-.input-item {
+form {
 width: 100%;
-margin: 2rem 0;
 position: relative;
+}
+.input-item {
+position: relative;
+width: 100%;
+margin: 2rem auto;
+z-index: 0;
+display: block;
+}
+.input-item.hidden {
+display: none;
+}
+.input-item.active {
+z-index: 1;
 }
 .input-item:before {
 position: absolute;
 content: '';
 width: 100%;
-height: 0;
+height: 100%;
 background: var(--white);
-bottom: 0;
+top: 0;
 left: 0;
 z-index: 1;
 }
+.input-item.active:before {
+top: calc(100% - 0.25rem);
+height: 0.25rem;
+}
+.input-item:last-child.active:before {
+top: 100%;
+opacity: 0;
+}
 .input-item label {
+position: absolute;
+left: 0;
+top: 0;
+}
+.input-item.active label {
 position: absolute;
 left: 0;
 top: -1.5rem;
@@ -640,7 +666,7 @@ background: var(--violet);
 border: none;
 font-weight: 700;
 }
-.input-item input:focus, textarea:focus {
+.input-item input:focus, textarea:focus, button:focus, a:focus {
 outline: none;
 }
 .input-item input.active {
@@ -675,7 +701,7 @@ border: none;
 background: var(--white);
 }
 .input-item .input-next svg {
-height: 2rem;
+height: 1.5rem;
 position: absolute;
 top: 50%;
 left: 50%;
@@ -685,22 +711,24 @@ fill: var(--violet);
 .input-item .input-next:hover svg {
 transform: translate(-40%, -50%);
 }
+.input-item .input-next.active svg {
+transform: translate(2rem, -50%);
+opacity: 0;
+}
 .input-next.submit {
 position: relative;
 white-space: nowrap;
 padding: 1rem 5rem 1rem 2rem;
-width: auto;
+width: 16rem;
 color: var(--violet);
+margin-top: 1rem;
+left: calc(100% - 16rem);
 }
 .input-next.submit svg {
 left: auto;
 right: 1rem;
 height: 1.75rem;
 }
-
-
-
-
 
 @media (min-width: 400px) {}
 
