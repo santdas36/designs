@@ -6,7 +6,7 @@
   <link href="css/fontawesome/css/fontawesome.min.css" rel="stylesheet">
   <link href="css/fontawesome/css/brands.min.css" rel="stylesheet">
   <link href="css/fontawesome/css/solid.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Muli:wght@400;500;700;800;900&family=Playfair+Display:wght@800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Muli:wght@400;500;700;800;900&family=Playfair+Display:wght@500;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/bsreboot.css">
   <link rel="stylesheet" href="css/style.css">
   <style>
@@ -59,31 +59,80 @@
 	}
 	.exp {
 	position: relative;
-	padding: 2rem;
-	width: calc(100% - 4rem);
+	margin: 5rem 0;
+	width: 100%;
 	display: flex;
 	align-items: flex-end;
+	flex-flow: row nowrap;
+	}
+	.exp:first-of-type {
+	margin-top: 2rem;
 	}
 	.exp img {
 	width: 50%;
+	flex: 0 0 auto;
 	}
 	.exp::before {
-	content: '01';
+	content: attr(data-index);
 	position: absolute;
 	font-size: 8rem;
 	font-weight: 900;
 	z-index: 2;
 	right: 0;
 	top: 0;
+	margin: 0;
 	color: #DABF93;
 	opacity: 0.25;
 	}
 	.exp-text {
 	padding: 2rem;
-	margin-right: -3rem;
+	padding-right: 10px;
 	text-align: right;
 	}
-  </style>
+	.exp:nth-of-type(2n) {
+	flex-flow: row-reverse nowrap;
+	}
+	.exp:nth-of-type(2n)::before {
+	right: auto;
+	left: 0;
+	}
+	.exp:nth-of-type(2n) .exp-text {
+	padding: 2rem;
+	padding-left: 10px;
+	text-align: left;
+	}
+	.small {
+	font-weight: 400;
+	font-size: 0.65em;
+	}
+	.table {
+	 background: rgba(234,207,163,0.2);
+	 display: flex;
+	 margin: 3rem 0;
+	}
+	.table div {
+	width: 50%;
+	padding: 2rem;
+	}
+	a {
+	font-family: 'Playfair Display';
+	}
+	.gallery {
+	display: flex;
+	justify-content: center;
+	flex-flow: row wrap;
+	width: calc(100% + 2rem);
+	margin-left: -1rem;
+	margin-top: -1rem;
+	}
+	img.gal {
+	width: calc((100% / 3) - 2rem);
+	margin: 1rem;
+	}
+
+	
+	
+	   </style>
   </head>
   
   <body>
@@ -101,15 +150,53 @@
 		<h4 class="subtitle">Areas of Interest</h4>
 		<h1 class="big">Editorial and Design</h1>
 	</div>
-	<div class="container two">
+	<div class="container three">
 		<h4 class="subtitle">Experience and Expertise</h4>
-		<div class="exp">
-			<img src="quest.png" data-index="01"/>
+		<div class="exp" data-index="01">
+			<img src="q1.png"/>
+			<div class="exp-text">
+				<h3 class="year">Since 2017</h3>
+				<p>Writing blog posts and copies for users online. Also experienced in digital designing such as branding, poster design, social media campaign, web design and development </p>
+			</div>
+		</div>
+		<div class="exp" data-index="02">
+			<img src="q2.png"/>
 			<div class="exp-text">
 				<h3 class="year">2017 - 2018</h3>
-				<p>Assisted at the Editorial of monthly newsletter called "Quest" from Holy Cross, Salem</p>
+				<p>Assisted at the Editorial of monthly newsletter called "Quest" from Holy Cross Matric Higher Secondary School, Salem</p>
 			</div>
 		</div>
 	</div>
+	<div class="container four">
+		<h4 class="subtitle">Work Sample</h4>
+		<h1 class="big">Dits and Dahs <span class="small">- where fantasy meets reality</small></span></h1>
+		<a href="https://blog.santdas.ga/">https://blog.santdas.ga/</a>
+		<div class="table">
+			<div>
+				<h5>Musing Around</h5>
+				<p>Types of tinkerers exist, but none where of my kind, that thingy thinks and does clumpsy things, that in quest of an advent, scrambles the perfect pieces, throws them at far corners, collects them again after a grievous hunt, and tries...</p>
+				<a href="https://blog.santdas.ga/posts/muse.html">https://blog.santdas.ga/muse.html</a>
+			</div>
+			<div>
+				<h5>It's Okay!</h5>
+				<p>It's ok that the thing isn't over. It's ok that you had a fall. It's ok that you're frightened and that you'll get through 'em all. It's ok that you climb too hard, to find yourself in some pitfall. And that, you now know it isn't over, It's nothing...</p>
+				<a href="https://blog.santdas.ga/posts/okay.html">https://blog.santdas.ga/muse.html</a>
+			</div>
+		</div>
+		<div class="gallery">
+			<img class="gal" src="d1.jpg" />
+			<img class="gal" src="d2.jpg" />
+			<img class="gal" src="d3.jpg" />
+			<img class="gal" src="d4.jpg" />
+			<img class="gal" src="d5.jpg" />
+			<img class="gal" src="d6.jpg" />
+		</div>
+		<h4 class="subtitle" style="color: #131821; margin-top: 2rem;">Instagram Handle: @<a href="instagram.com/dits.and.dahs">dits.and.dahs</a></h4>
+	</div>
+	<div class="container two">
+		<h4 class="subtitle">Work Samples</h4>
+		<h1 class="big">Designs and other works</h1>
+	</div>
+
   </body>
  </html>
