@@ -3,9 +3,6 @@
  <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="css/fontawesome/css/fontawesome.min.css" rel="stylesheet">
-  <link href="css/fontawesome/css/brands.min.css" rel="stylesheet">
-  <link href="css/fontawesome/css/solid.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Muli:wght@400;500;700;800;900&family=Playfair+Display:wght@500;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/bsreboot.css">
   <link rel="stylesheet" href="css/style.css">
@@ -17,8 +14,10 @@
 	font-family: Muli;
 	padding: 5rem;
 	color: #151821;
+	font-size: 1.15rem;
+	position: relative;
 	}
-	.container:not(first-child) {
+	.container {
 	margin: 5rem 0;
 	}
 	.reg {
@@ -27,7 +26,6 @@
 	}
 	.container.one {
 	position: relative;
-	margin: 2rem 0 5rem 0;
 	}
 	.one img {
 	position: absolute;
@@ -114,7 +112,7 @@
 	width: 50%;
 	padding: 2rem;
 	}
-	a {
+	a.link {
 	font-family: 'Playfair Display';
 	}
 	.gallery {
@@ -129,13 +127,31 @@
 	width: calc((100% / 3) - 2rem);
 	margin: 1rem;
 	}
-
-	
-	
+	.contact {
+	padding: 0.25rem 0 0.25rem;
+	margin: 0;
+	}
+	.contact img {
+	margin-right: 1rem;
+	}
+	.fg {
+	position: absolute;
+	width: 100vw;
+	right: 0;
+	top: 3rem;
+	z-index: 3;
+	}
+	.container.three {
+	margin-top: 15rem;
+	}
+	.container.two {
+	margin-top: -3rem;
+	}
 	   </style>
   </head>
   
   <body>
+  	<img src="fg.png" class="fg">
   	<div class="container one">
   		<h1 class="name">DASH SANTOSH S</h1>
   		<hr>
@@ -144,23 +160,31 @@
   		Electronics and Communication Engineering,<br>
   		Government College of Engineering,<br>
   		Salem - 11</p>
-  		<img src="me.jpg" />
+		<p class="contact"><a href="https://santdas.ga">https://santdas.ga</a></p>
+  		<img src="https://design.santdas.ga/resume/me.jpg" />
 	</div>
 	<div class="container two">
+		<h4 class="subtitle">Contact Info</h4>
+		<p class="contact"><img src="em.png" /> santdas36@gmail.com</p>
+		<p class="contact"><img src="wa.png" /> +91 7867 94 3737</p>
+		<p class="contact"><img src="db.png" width="24px" /> /santdas36</p>
+		<p class="contact"><img src="ig.png" width="24px" /> @santdas36</p>
+	</div>
+	<div class="container three">
 		<h4 class="subtitle">Areas of Interest</h4>
 		<h1 class="big">Editorial and Design</h1>
 	</div>
-	<div class="container three">
+	<!--div class="container four">
 		<h4 class="subtitle">Experience and Expertise</h4>
 		<div class="exp" data-index="01">
-			<img src="q1.png"/>
+			<img src="https://design.santdas.ga/resume/q1.png"/>
 			<div class="exp-text">
 				<h3 class="year">Since 2017</h3>
 				<p>Writing blog posts and copies for users online. Also experienced in digital designing such as branding, poster design, social media campaign, web design and development </p>
 			</div>
 		</div>
 		<div class="exp" data-index="02">
-			<img src="q2.png"/>
+			<img src="https://design.santdas.ga/resume/q2.png"/>
 			<div class="exp-text">
 				<h3 class="year">2017 - 2018</h3>
 				<p>Assisted at the Editorial of monthly newsletter called "Quest" from Holy Cross Matric Higher Secondary School, Salem</p>
@@ -169,34 +193,34 @@
 	</div>
 	<div class="container four">
 		<h4 class="subtitle">Work Sample</h4>
-		<h1 class="big">Dits and Dahs <span class="small">- where fantasy meets reality</small></span></h1>
-		<a href="https://blog.santdas.ga/">https://blog.santdas.ga/</a>
+		<h1 class="big">Dits and Dahs <span class="small"><i>- where fantasy meets reality</i></span></h1>
+		<a href="https://blog.santdas.ga/temporary">https://blog.santdas.ga/</a>
 		<div class="table">
 			<div>
 				<h5>Musing Around</h5>
 				<p>Types of tinkerers exist, but none where of my kind, that thingy thinks and does clumpsy things, that in quest of an advent, scrambles the perfect pieces, throws them at far corners, collects them again after a grievous hunt, and tries...</p>
-				<a href="https://blog.santdas.ga/posts/muse.html">https://blog.santdas.ga/muse.html</a>
+				<a class="link" href="https://blog.santdas.ga/temporary/posts/muse.html">https://blog.santdas.ga/muse.html</a>
 			</div>
 			<div>
 				<h5>It's Okay!</h5>
 				<p>It's ok that the thing isn't over. It's ok that you had a fall. It's ok that you're frightened and that you'll get through 'em all. It's ok that you climb too hard, to find yourself in some pitfall. And that, you now know it isn't over, It's nothing...</p>
-				<a href="https://blog.santdas.ga/posts/okay.html">https://blog.santdas.ga/muse.html</a>
+				<a class="link" href="https://blog.santdas.ga/temporary/posts/okay.html">https://blog.santdas.ga/okay.html</a>
 			</div>
 		</div>
 		<div class="gallery">
-			<img class="gal" src="d1.jpg" />
-			<img class="gal" src="d2.jpg" />
-			<img class="gal" src="d3.jpg" />
-			<img class="gal" src="d4.jpg" />
-			<img class="gal" src="d5.jpg" />
-			<img class="gal" src="d6.jpg" />
+			<img class="gal" src="https://design.santdas.ga/resume/d1.jpg" />
+			<img class="gal" src="https://design.santdas.ga/resume/d2.jpg" />
+			<img class="gal" src="https://design.santdas.ga/resume/d3.jpg" />
+			<img class="gal" src="https://design.santdas.ga/resume/d4.jpg" />
+			<img class="gal" src="https://design.santdas.ga/resume/d5.jpg" />
+			<img class="gal" src="https://design.santdas.ga/resume/d6.jpg" />
 		</div>
 		<h4 class="subtitle" style="color: #131821; margin-top: 2rem;">Instagram Handle: @<a href="instagram.com/dits.and.dahs">dits.and.dahs</a></h4>
 	</div>
-	<div class="container two">
-		<h4 class="subtitle">Work Samples</h4>
-		<h1 class="big">Designs and other works</h1>
-	</div>
+	<div class="container five">
+		<h4 class="subtitle">Work Sample</h4>
+		<h1 class="big">Poster Designs <span class="small"><i>and other works</i></span></h1>
+	</div-->
 
   </body>
  </html>
