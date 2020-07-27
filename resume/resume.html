@@ -6,7 +6,7 @@
   <link href="css/fontawesome/css/fontawesome.min.css" rel="stylesheet">
   <link href="css/fontawesome/css/brands.min.css" rel="stylesheet">
   <link href="css/fontawesome/css/solid.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Muli:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Muli:wght@400;500;700;800;900&family=Playfair+Display:wght@800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/bsreboot.css">
   <link rel="stylesheet" href="css/style.css">
   <style>
@@ -27,17 +27,18 @@
 	}
 	.container.one {
 	position: relative;
-	margin: 3rem 0 5rem 0;
+	margin: 2rem 0 5rem 0;
 	}
 	.one img {
 	position: absolute;
 	height: calc(100% - 10px);
 	top: 10px;
 	right: 0;
-	box-shadow: 0 0 0 5px #151821, 10px 10px 0 #DABF93;
+	box-shadow: 0 0 0 10px #DABF93;
 	}
 	h1.name {
 	margin-bottom: 0.5rem;
+	font-weight: 900;
 	}
 	hr {
 	width: 150px;
@@ -46,6 +47,41 @@
 	opacity: 1;
 	margin: 0;
 	margin-bottom: 2rem;
+	}
+	.subtitle {
+	font-weight: 900;
+	color: #DABF93;
+	font-family: "Playfair Display";
+	}
+	.big {
+	margin-left: -2px;
+	font-weight: 800;
+	}
+	.exp {
+	position: relative;
+	padding: 2rem;
+	width: calc(100% - 4rem);
+	display: flex;
+	align-items: flex-end;
+	}
+	.exp img {
+	width: 50%;
+	}
+	.exp::before {
+	content: '01';
+	position: absolute;
+	font-size: 8rem;
+	font-weight: 900;
+	z-index: 2;
+	right: 0;
+	top: 0;
+	color: #DABF93;
+	opacity: 0.25;
+	}
+	.exp-text {
+	padding: 2rem;
+	margin-right: -3rem;
+	text-align: right;
 	}
   </style>
   </head>
@@ -62,7 +98,18 @@
   		<img src="me.jpg" />
 	</div>
 	<div class="container two">
-		Applying for Editorial and Pho
+		<h4 class="subtitle">Areas of Interest</h4>
+		<h1 class="big">Editorial and Design</h1>
+	</div>
+	<div class="container two">
+		<h4 class="subtitle">Experience and Expertise</h4>
+		<div class="exp">
+			<img src="quest.png" data-index="01"/>
+			<div class="exp-text">
+				<h3 class="year">2017 - 2018</h3>
+				<p>Assisted at the Editorial of monthly newsletter called "Quest" from Holy Cross, Salem</p>
+			</div>
+		</div>
 	</div>
   </body>
  </html>
