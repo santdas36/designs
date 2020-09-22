@@ -629,6 +629,7 @@ transform-origin: 50% 50%;
 }
 .service:hover::before {
 	background: var(--white);
+	transform: rotate(45deg);
 }
 .service svg {
 	width: 50%;
@@ -716,6 +717,19 @@ line-height: 1.33;
 	flex: 0 0 40%;
 	padding-left: 3rem;
 }
+.project-desc {
+	font-size: 0.9rem;
+}
+.project-details .stack {
+	margin: 2rem 0;
+	padding: 0.5rem 1rem;
+	background: var(--white);
+	border-radius: 0.5rem;
+}
+.project-details .stack b {
+	color: var(--gray);
+	font-weight: 500;
+}
 .project-details .buttons {
 	margin-top: 2rem;
 }
@@ -736,6 +750,7 @@ line-height: 1.33;
 .project-images, .project-details {
 	width: 100%;
 	margin: 0;
+	padding: 0;
 }
 .project-images img {
 	border: 0.25rem solid var(--teal);
@@ -748,8 +763,8 @@ line-height: 1.33;
 	left: auto !important;
 }
 .project-details {
-	margin: 0 !important;
-	padding-top: 20%;
+	padding: 0 !important;
+	margin-top: 20%;
 }
 }
 
