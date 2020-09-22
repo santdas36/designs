@@ -171,15 +171,14 @@ section#hero .container {
 display: flex;
 align-items: center;
 justify-content: center;
-padding: 2rem 5rem;
-padding-top: 0;
+padding: 2rem 5rem 8rem 5rem;
 }
 .container .hero-image{
 flex: 0 0 35%;
-max-width: 450px
+max-width: 25rem;
 }
 .container .hero-content {
-margin: 0 3rem;
+margin: auto 3rem 2rem 3rem;
 }
 .container .hero-content h4 {
 font-weight: 900;
