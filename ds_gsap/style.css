@@ -578,14 +578,14 @@ transform-origin: 50% 50%;
 background: var(--white);
 box-shadow: 0 -1rem 2rem -1.5rem rgba(0,0,0,0.15), 0 1rem 2rem -1.5rem rgba(0,0,0,0.15);
 }
-.about-quote h5 {
-margin: 1rem 0 5rem 2rem;
-font-weight: 600;
+.about-quote h4 {
+margin: 1rem 0 5rem 1.25rem;
+font-weight: 700;
 }
 .quote h2 {
 font-weight: 800;
 line-height: 1.33;
-fonkt-family: "Work Sans", sans-serif;
+white-space: nowrap;
 color: var(--gray);
 }
 .quote {
@@ -686,20 +686,6 @@ line-height: 1.33;
 	100% {transform: scale(0.8); opacity: 0}
 }
 @media (max-width: 1150px) {
-.quote {
-padding: 1.25rem;
-}
-.about-quote h5 {
-margin: 1rem 0 3rem 0;
-}
-.quote span.fas {
-font-size: 4rem;
-right: -0.5rem;
-bottom: -0.5rem;
-}
-.quote i {
-padding-right: 3.5rem;
-}
 .services {
 	margin-left: -0.5rem;
 	width: calc(100% + 1rem);
@@ -711,6 +697,23 @@ padding-right: 3.5rem;
 }
 }
 @media (max-width: 550px) {
+.quote {
+padding: 1.25rem;
+}
+.about-quote h4 {
+margin: 1rem 0 3rem 0;
+}
+.quote h2 {
+white-space: normal;
+}
+.quote span.fas {
+font-size: 4rem;
+right: -0.5rem;
+bottom: -0.5rem;
+}
+.quote i {
+padding-right: 3.5rem;
+}
 .services {
 	flex-flow: column nowrap;
 	margin: 0;
