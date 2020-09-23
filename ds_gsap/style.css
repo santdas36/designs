@@ -92,6 +92,7 @@ font-weight: 700;
 font-weight: 900;
 position: relative;
 margin-bottom: 3rem;
+color: var(--teal);
 z-index: 2;
 text-transform: uppercase;
 }
@@ -574,9 +575,46 @@ transform-origin: 50% 50%;
 
 
 #about {
-	background: var(--white);
-	box-shadow: 0 -1rem 2rem -1.5rem rgba(0,0,0,0.15), 0 1rem 2rem -1.5rem rgba(0,0,0,0.15);
+background: var(--white);
+box-shadow: 0 -1rem 2rem -1.5rem rgba(0,0,0,0.15), 0 1rem 2rem -1.5rem rgba(0,0,0,0.15);
 }
+.about-quote h5 {
+margin: 1rem 0 5rem 2rem;
+font-weight: 600;
+}
+.quote h2 {
+font-weight: 800;
+line-height: 1.33;
+fonkt-family: "Work Sans", sans-serif;
+color: var(--gray);
+}
+.quote {
+position: relative;
+z-index: 2;
+width: fit-content;
+display: flex;
+flex-flow: column nowrap;
+padding: 2rem;
+background: var(--lightblue);
+border-radius: 0.5rem;
+box-shadow: 0 0.25rem 1rem -0.25rem rgba(0,0,0,0.05);
+}
+.quote span.fas {
+position: absolute;
+font-size: 5rem;
+right: -1rem;
+bottom: -1rem;
+color: var(--lightblue);
+-webkit-text-stroke: 1.5px var(--gray);
+}
+.quote i {
+color: var(--gray);
+text-align: right;
+display: block;
+padding-right: 4rem;
+}
+
+
 .services {
 	display: flex;
 	margin-left: -1.5rem;
@@ -586,7 +624,7 @@ transform-origin: 50% 50%;
 	background: transparent;
 	flex: 0 0 calc(100% / 3 - 3rem);
 	margin: 0 1.5rem;
-	padding: 1.5rem;
+	padding: 1.25rem;
 	position: relative;
 	transition: all 0.2s;
 	z-index: 1;
@@ -612,8 +650,8 @@ transform-origin: 50% 50%;
 }
 .service:nth-of-type(1)::before {
 	border-radius: 48% 52% 42% 58% / 66% 70% 30% 34%;
-	padding-bottom: 40%;
-	top: 10%;
+	top: 12%;
+	padding-bottom: 38%;
 }
 .service:nth-of-type(2)::before {
 	border-radius: 53% 47% 64% 36% / 66% 55% 45% 34%;
@@ -648,6 +686,20 @@ line-height: 1.33;
 	100% {transform: scale(0.8); opacity: 0}
 }
 @media (max-width: 1150px) {
+.quote {
+padding: 1.25rem;
+}
+.about-quote h5 {
+margin: 1rem 0 3rem 0;
+}
+.quote span.fas {
+font-size: 4rem;
+right: -0.5rem;
+bottom: -0.5rem;
+}
+.quote i {
+padding-right: 3.5rem;
+}
 .services {
 	margin-left: -0.5rem;
 	width: calc(100% + 1rem);
@@ -656,7 +708,6 @@ line-height: 1.33;
 	background: transparent;
 	flex: 0 0 calc(100% / 3 - 1rem);
 	margin: 0 0.5rem;
-	padding: 1.25rem;
 }
 }
 @media (max-width: 550px) {
@@ -692,6 +743,9 @@ line-height: 1.33;
 	padding: 2rem 0;
 	margin-bottom: 10rem;
 	align-items: center;
+}
+.project:last-of-type {
+	margin-bottom: 5rem;
 }
 .project:nth-of-type(2n + 1) {
 	flex-flow: row-reverse nowrap;
@@ -818,4 +872,10 @@ line-height: 1.33;
 	background: transparent;
 	color: var(--teal);
 	padding: 0.5rem;
+}
+
+
+#contact {
+	background: var(--white);
+	box-shadow: 0 -1rem 2rem -1.5rem rgba(0,0,0,0.15), 0 1rem 2rem -1.5rem rgba(0,0,0,0.15);
 }
