@@ -6,7 +6,7 @@
   <title>DASH SANTOSH</title>
   <meta name="theme-color" content="#fff">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalabjle=no">
-  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700;800;900&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="bootstrap-reboot.css">
   <link href="fontawesome/css/fontawesome.min.css" rel="stylesheet">
   <link href="fontawesome/css/brands.min.css" rel="stylesheet">
@@ -19,8 +19,8 @@
 <!--div class="preload">
 <div class="circle"></div>
 </div-->
-<div class="cursor"></div>
 <div class="wrapper">
+<div class="cursor"></div>
 <header>
 	<div class="container">
 	<nav>
@@ -59,7 +59,10 @@
 <main>
 	<section id="hero">
 		<div class="container">
-			<div class="hero-image"><img src="avatar.png" /></div>
+			<div class="hero-image">
+				<img class="avatar-bg" src="avatar-bg.png" />
+				<img class="avatar" src="avatar.png" />
+			</div>
 			<div class="hero-content">
 				<h4>HELLO. THIS IS</h4>
 				<h1 class="title">DASH SANTOSH</h1>
@@ -74,16 +77,22 @@
 	</section>
 	<section id="about">
 		<div class="container">
+		<h3 class="heading">Who Am I?</h3>
+			<div class="about-who">
+				<span class="ido1">I'm a</span>
+				<span class="ido2">Front-End Developer</span>
+				<span class="ido3">UI/UX Designer</span>
+			</div>
 		<h3 class="heading">What Do I Do?</h3>
-		<div class="about-quote">
+		<!--div class="about-quote">
 			<div class="quote">
-				<h2>What separates <wbr/>Design from Art is that Design is <wbr/>meant to be - functional.</h2>
+				<h4>What separates Design from Art is that <wbr/>Design is meant to be - functional.</h4>
 				<i class="cite">Cameron Moll</i>
 				<span class="fas fa-quote-right"></span>
 			</div>
 			<br />
 			<h4>And I, make it functional.</h4>
-		</div>
+		</div-->
 		<div class="services">
 			<div class="service">
 <svg viewBox="0 0 144 144" xmlns="http://www.w3.org/2000/svg" stroke-width="1.5">
@@ -202,12 +211,24 @@
 	
 	<section id="work">
 		<div class="container">
-			<h3 class="heading white">Projects</h3>
-			<div class="projects">
+			<div class="work-header">
+				<h3 class="heading white">What I've done?</h3>
+				<div class="work-radio">
+					<span class="work-option">
+						<input type="radio" name="workType" value="code" id="workTypeCode" checked/>
+						<label for="workTypeCode"><span class="fas fa-code"></span> Code</label>
+					</span>
+					<span class="work-option">
+						<input type="radio" name="workType" value="design" id="workTypeDesign"/>
+						<label for="workTypeDesign"><span class="fas fa-magic"></span> Design</label>
+					</span>
+				</div>
+			</div>
+			<div class="projects" id="projects">
 				<div class="project">
 					<div class="project-images">
-						<img class="big" src="images/amazon.webp" />
-						<img class="small" src="images/amazon-small.webp" />
+						<img loading="lazy" class="big" src="images/amazon.webp" />
+						<img loading="lazy" class="small" src="images/amazon-small.webp" />
 					</div>
 					<div class="project-details">
 						<h4>Amazon-ish</h4>
@@ -221,8 +242,8 @@
 				</div>
 				<div class="project">
 					<div class="project-images">
-						<img class="big" src="images/tmdb.webp" />
-						<img class="small" src="images/tmdb-small.webp" />
+						<img loading="lazy" class="big" src="images/tmdb.webp" />
+						<img loading="lazy" class="small" src="images/tmdb-small.webp" />
 					</div>
 					<div class="project-details">
 						<h4>TMDb-ish</h4>
@@ -236,8 +257,8 @@
 				</div>
 				<div class="project">
 					<div class="project-images">
-						<img class="big" src="images/spotify.webp" />
-						<img class="small" src="images/spotify-small.webp" />
+						<img loading="lazy" class="big" src="images/spotify.webp" />
+						<img loading="lazy" class="small" src="images/spotify-small.webp" />
 					</div>
 					<div class="project-details">
 						<h4>Spotify-ish</h4>
@@ -250,26 +271,92 @@
 					</div>
 				</div>
 			</div>
+			<div class="designs" id="designs">
+				<div class="design">
+					<img loading="lazy" src="images/design/nxtlvl.webp" />
+				</div>
+				<div class="design">
+					<img loading="lazy" src="images/design/photography.webp" />
+				</div>
+				<div class="design">
+					<img loading="lazy" src="images/design/ditsndahs.webp" />
+				</div>
+				<div class="design">
+					<img loading="lazy" src="images/design/zeyes.webp" />
+				</div>
+				<div class="design">
+					<img loading="lazy" src="images/design/vp404.webp" />
+				</div>
+				<div class="design">
+					<img loading="lazy" src="images/design/google.webp" />
+				</div>
+				<div class="design">
+					<img loading="lazy" src="images/design/monotono.webp" />
+				</div>
+				<div class="design">
+					<img loading="lazy" src="images/design/gradients.webp" />
+				</div>
+				<div class="design">
+					<img loading="lazy" src="images/design/santdas.webp" />					
+				</div>
+			</div>
 		</div>
 	</section>
 	
 	<section id="contact">
 		<div class="container"></div>
-	</section>
-	
-	
+	</section>	
 </main>
 
 <footer>
+	<div class="container">
+			<div class="nav-info">
+				<img src="logo.svg" />
+				<span>
+					<h3>Dash Santosh</h3>
+					<p>Front-End Developer</p>
+				</span>
+			</div>
+			<span class="nav-social">
+				<a><span class="fab fa-fw fa-facebook"></span></a>
+				<a><span class="fab fa-fw fa-instagram"></span></a>
+				<a><span class="fab fa-fw fa-dribbble"></span></a>
+				<a><span class="fab fa-fw fa-github"></span></a>
+				<a><span class="fab fa-fw fa-linkedin-in"></span></a>
+			</span>
+		</div>
+	</div>
 </footer>
 </div>
 </body>
 <script src="magnet-mouse.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script><script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+<script>
+
+const codeDiv = document.getElementById('projects');
+const designDiv = document.getElementById('designs');
+const workCode = document.getElementById('workTypeCode');
+const workDesign = document.getElementById('workTypeDesign');
+const workOption = [workCode, workDesign];
+workOption.forEach((radio) => {
+	radio.addEventListener('change', (e) => {
+		let current = e.target.value;
+		if (e.target.checked && current === 'code') {
+			gsap.to(designDiv, {opacity: 0, y: '50px', display: 'none', duration: 0.3});
+			gsap.to(codeDiv, {opacity: 1, y: 0, display: 'block', duration: 0.3, delay: 0.3});
+		} else if (e.target.checked && current === 'design') {
+			gsap.to(codeDiv, {opacity: 0, y: '50px', display: 'none', duration: 0.3});
+			gsap	.to(designDiv, {opacity: 1, y: 0, display: 'flex', duration: 0.3, delay: 0.3});
+		}
+	});
+});
 
 gsap.from(".service", {
-  scrollTrigger: ".services",
+  scrollTrigger: {
+    trigger: ".services",
+    start: "top 300"
+  },
   duration: 0.6,
   y: 50, 
   opacity: 0, 
@@ -291,6 +378,34 @@ projectImages.forEach(image => {
 	  y: 80, 
 	  ease: "power1.inOut",
 	});
+});
+
+gsap.to('.ido1', {
+  scrollTrigger: {
+    trigger: '.ido1',
+    scrub: true,
+    start: "top bottom",
+    end: "bottom top",
+  },
+  x: '100%',
+});
+gsap.to('.ido2', {
+  scrollTrigger: {
+    trigger: '.ido2',
+    scrub: true,
+    start: "top bottom",
+    end: "bottom top",
+  },
+  x: '-35%',
+});
+gsap.to('.ido3', {
+  scrollTrigger: {
+    trigger: '.ido3',
+    scrub: true,
+    start: "top bottom",
+    end: "bottom top",
+  },
+  x: '70%',
 });
 
 const projectImagesBig = document.querySelectorAll(".project-images .big");
@@ -353,6 +468,16 @@ navLinks.forEach((navLink) => {
 	});
 	navLink.addEventListener('mouseleave', () => {
 		cursor.classList.remove('cursor-hover');
+	});
+});
+
+var marquees = document.querySelectorAll('.about-who span');
+marquees.forEach((marquee) => {
+	marquee.addEventListener('mouseenter', () => {
+		cursor.classList.add('cursor-scroll');
+	});
+	marquee.addEventListener('mouseleave', () => {
+		cursor.classList.remove('cursor-scroll');
 	});
 });
 
