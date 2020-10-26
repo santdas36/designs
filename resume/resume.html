@@ -57,6 +57,7 @@
 	}
 	.exp {
 	margin: 8rem 0;
+	padding: 0;
 	width: 100%;
 	display: flex;
 	align-items: flex-end;
@@ -66,8 +67,8 @@
 	margin-top: 5rem;
 	}
 	.exp img {
+	flex: 0 0 50%;
 	width: 50%;
-	flex: 0 0 auto;
 	}
 	.exp-text::before {
 	content: attr(data-index);
@@ -198,8 +199,8 @@
   	<div class="container one">
   		<h2 class="name">DASH SANTOSH S</h2>
   		<hr>
-  		<p>Front-end developer and UI/UX Designer.</p>
-		<p><a href="https://santdas.ga">https://dashsantosh.ga</a></p>
+  		<p style="padding-bottom: 1rem">Front-end developer and UI/UX Designer.<br>
+		<a href="https://santdas.ga">https://dashsantosh.ga</a></p>
   		<img src="me.jpg" />
 	</div>
 	<div class="container two">
@@ -268,19 +269,19 @@
 	<div class="container four">
 		<h4 class="subtitle">Projects</h4>
 		<div class="exp">
-			<img src="q1.png"/>
-			<div data-index="01" class="exp-text">
-				<h5 class="year">Amazon-ish | Concept Redesign</h5>
-				<p>Amazon redesign with a modern UI, <br>complete E-Commerce functionality including Payment Processing (Stripe API) and User Authentication (Firebase).</p>
-				<a href="https://amazon-ish.vercel.app">https://amazon-ish.vercel.app</a>
-			</div>
-		</div>
-		<div class="exp">
 			<img src="q2.png"/>
-			<div data-index="02" class="exp-text even">
+			<div data-index="01" class="exp-text">
 				<h5 class="year">Srihayaas | Local Business Site</h5>
 				<p>Srihayaas Studios is a local business providing high end services. The main goal was to spread the word and gain social trust.</p>
 				<a href="https://srihayaas.in">https://srihayaas.in</a>
+			</div>
+		</div>
+		<div class="exp">
+			<img src="q1.png"/>
+			<div data-index="02" class="exp-text even">
+				<h5 class="year">Amazon-ish | Concept Redesign</h5>
+				<p>Amazon redesign with a modern UI, <br>complete E-Commerce functionality including Payment Processing (Stripe API) and User Authentication (Firebase).</p>
+				<a href="https://amazon-ish.vercel.app">https://amazon-ish.vercel.app</a>
 			</div>
 		</div>
 	</div>
